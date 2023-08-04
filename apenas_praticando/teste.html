@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testando conhecimentos</title>
+</head>
+    <style>
+        #area{
+            background-color: green;
+            height: 200px;
+            width: 300px;
+            text-align: center;
+            padding: 100px 0px 0px 0px;
+            color: white;
+            font: normal bolder 2em arial;
+            margin-bottom: 30px;
+        }
+    </style>
+<body>
+    <h1>TESTE</h1>
+    <div id="area">TESTE</div>
+    <input type="number" name="txtn1" id="txtn1">+
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">resultado</div>
+    
+
+    <script>
+        var a = window.document.querySelector('div#area');
+        a.addEventListener('mouseover', entrar);
+        a.addEventListener('mouseout', sair);
+        a.addEventListener('mousedown', clicar);
+
+        function entrar(){
+            a.style.background = 'black';
+            a.innerHTML = 'entrou'
+        }
+
+        function sair(){
+            a.style.background = 'green';
+            a.innerHTML = 'saiu'
+        }
+
+        function clicar(){
+            a.style.background = 'blue';
+            a.innerHTML = 'clicou';
+        }
+        
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1');
+            var tn2 = window.document.getElementById('txtn2');
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var s = n1+n2;
+            var res = window.document.getElementById('res');
+            res.innerHTML = `seu resultado é ${s}`;
+        }
+
+    </script>
+</body>
+</html>

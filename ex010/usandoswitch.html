@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nacionalidade</title>
+    <style>
+        body{
+            background-color: rgb(153, 71, 153);
+        }
+
+        *{
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Veja se você é brasileiro</h1>
+    Digite o lugar onde você nasceu: <input type="text" name="txt1" id="txt1">
+    <input type="button" value="verifcar" onclick="verificar()">
+    <div id="res"></div> 
+    
+    <script>
+        function verificar(){
+            var nacio = window.document.querySelector('input#txt1');
+            var teste = (nacio.value);
+            var res = window.document.querySelector('div#res');
+            switch(teste){
+                case 'Brasil':
+                    res.innerHTML = 'você é brasileiro';
+                    break; 
+                default:
+                    res.innerHTML = "Você é estrangeiro";
+                    break;
+                }
+            }
+    </script>
+</body>
+</html>
